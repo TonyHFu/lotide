@@ -31,7 +31,6 @@ const eqObjects = function(object1, object2) {
     }
   }
   return true;
-
 };
 
 // FUNCTION IMPLEMENTATION
@@ -42,7 +41,7 @@ const assertObjectsEqual = function(actual, expected) {
     console.log(`Assertion Passed: ${inspect(actual)} equals ${inspect(expected)}`);
   } else {
     console.log(`Assertion Failed: ${inspect(actual)} does not equal ${inspect(expected)}`);
-    
+
   }
 };
 
