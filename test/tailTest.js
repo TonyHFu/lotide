@@ -1,5 +1,3 @@
-const exp = require("constants");
-const assertEqual = require("../assertEqual");
 const tail = require("../tail");
 const assert = require("chai").assert;
 
