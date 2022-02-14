@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`👍👍Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🤬🤬Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const findKey = function(dict, callback) {
   const defaultResult = undefined;
 
@@ -17,53 +9,55 @@ const findKey = function(dict, callback) {
   return defaultResult;
 };
 
+module.exports = findKey;
 
-const result1 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2); // => "noma"
 
-assertEqual(result1, "noma");
+// const result1 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2); // => "noma"
 
-const result2 = findKey({
+// assertEqual(result1, "noma");
 
-}, x => x > 0);
+// const result2 = findKey({
 
-assertEqual(result2, undefined);
+// }, x => x > 0);
 
-const result3 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars > 4);
+// assertEqual(result2, undefined);
 
-assertEqual(result3, undefined);
+// const result3 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars > 4);
 
-const result4 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => '');
+// assertEqual(result3, undefined);
 
-assertEqual(result4, undefined);
+// const result4 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => '');
 
-const result5 = findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => 1);
+// assertEqual(result4, undefined);
 
-assertEqual(result5, "Blue Hill");
+// const result5 = findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => 1);
+
+// assertEqual(result5, "Blue Hill");
