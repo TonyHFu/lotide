@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@tonyhaofu/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Implementation of lodash-like library as part of Lighthouse Labs bootcamp",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/tofutigerz/lotide.git"
   },
-  "author": "",
+  "author": "Tony Hao Fu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tofutigerz/lotide/issues"
