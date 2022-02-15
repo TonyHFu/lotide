@@ -2,7 +2,7 @@
   "name": "@tonyhaofu/lotide",
   "version": "1.0.0",
   "description": "Implementation of lodash-like library as part of Lighthouse Labs bootcamp",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },

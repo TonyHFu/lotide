@@ -1,5 +1,7 @@
 const eqArrays = require("./eqArrays");
 
+
+
 const eqObjects = function(object1, object2) {
   // console.log("object1", object1);
   // console.log("object2", object2)
@@ -36,6 +38,8 @@ const eqObjects = function(object1, object2) {
   
   if (Array.isArray(element1) && Array.isArray(element2)) {
     // console.log("both first elements are arrays");
+    const eqArrays = require("./eqArrays");
+
     let arraysEqual = eqArrays(element1, element2);
     // console.log("arraysEqual", arraysEqual);
     delete object1[firstKey];
@@ -62,28 +66,7 @@ const eqObjects = function(object1, object2) {
   }
 
 };
-
 module.exports = eqObjects;
 
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// assertEqual(eqObjects(ab, ba), true); // => true
 
-// const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false); // => false
-
-// const cd = { c: "1", d: ["2", 3] };
-// const dc = { d: ["2", 3], c: "1" };
-// assertEqual(eqObjects(cd, dc), true); // => true
-
-// const cd2 = { c: "1", d: ["2", 3, 4] };
-// assertEqual(eqObjects(cd, cd2), false); // => false
-
-// assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true); // => true
-
-// assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false); // => false
-// assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false); // => false
-
-// assertEqual(eqObjects({ a: { z: {c: 2, t: [1, 2, [3, 4]],d: 5, e: {x: 9}} }, b: 2 }, { a: { z: {c: 2, t: [1, 2, [3, 4]],d: 5, e: {x: 9}} }, b: 2 }), true); // => true
-
-// assertEqual(eqObjects({ a: { z: {c: 2, t: [1, 2, [{a: 1, b: [1]}, 4]],d: 5, e: {x: 9}} }, b: 2 }, { a: { z: {c: 2, t: [1, 2, [{a: 1, b: [1]}, 4]],d: 5, e: {x: 9}} }, b: 2 }), true); // => true
+// console.log(eqObjects({}, {}));

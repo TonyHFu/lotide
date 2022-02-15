@@ -1,3 +1,5 @@
+const eqObjects = require("./eqObjects");
+
 const eqArrays = function(array1, array2) {
   // console.log("array1", array1);
   // console.log("array2", array2);
@@ -22,6 +24,7 @@ const eqArrays = function(array1, array2) {
     // console.log("only one first element is array");
     return false;
   } else if (typeof element1 === "object" && typeof element2 === "object") {
+    const eqObjects = require("./eqObjects");
     // console.log("both first elements are objects");
     let objectEqual = eqObjects(element1, element2);
     // console.log(objectEqual? "first element object equal": "first element object not equal");
